@@ -16,7 +16,7 @@ selama satu semester.
 | Modul | Topik | Source Code dan Screenshot |
 |---|---|---|
 | 01 | [Topik Praktikum 01] | [Folder](./Modul-01/) |
-| 02 | [Topik Praktikum 01] | [Folder](./Modul-02/) |
+| 02 | [Topik Praktikum 02] | [Folder](./Modul-02/) |
 
 ## Cara Menjalankan Aplikasi
 
