@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Perpustakaan Madiun</title>
+</head>
+<body>
+
+    <h2>FORMULIR PENDAFTARAN ANGGOTA PERPUSTAKAAN MADIUN</h2>
+
+    <form action="" method="get">
+
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama"
+               placeholder="Masukkan nama lengkap" required>
+        <br><br>
+
+        <label for="nim">NIM:</label><br>
+        <input type="text" id="nim" name="nim"
+               placeholder="Masukkan NIM" required>
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"
+               placeholder="contoh@email.com" required>
+        <br><br>
+
+        <label for="telepon">Nomor Telepon:</label><br>
+        <input type="tel" id="telepon" name="telepon"
+               placeholder="Masukkan nomor telepon">
+        <br><br>
+
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" id="laki" name="jenis_kelamin"
+               value="Laki-laki" required>
+        <label for="laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis_kelamin"
+               value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+        <br><br>
+
+        <label for="prodi">Program Studi:</label><br>
+        <select id="prodi" name="prodi" required>
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="Informatika">Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Manajemen">Manajemen</option>
+            <option value="Akuntansi">Akuntansi</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+        <br><br>
+
+        <label for="jenis">Jenis Keanggotaan:</label><br>
+        <select id="jenis" name="jenis_keanggotaan" required>
+            <option value="">-- Pilih Keanggotaan --</option>
+            <option value="Mahasiswa">Mahasiswa</option>
+            <option value="Umum">Umum</option>
+        </select>
+        <br><br>
+
+        <label>Minat Bacaan:</label><br>
+        <input type="checkbox" id="novel" name="bacaan[]"
+               value="Novel">
+        <label for="novel">Novel</label><br>
+
+        <input type="checkbox" id="teknologi" name="bacaan[]"
+               value="Teknologi">
+        <label for="teknologi">Teknologi</label><br>
+
+        <input type="checkbox" id="ilmiah" name="bacaan[]"
+               value="Ilmiah">
+        <label for="ilmiah">Buku Ilmiah</label><br>
+
+        <input type="checkbox" id="sejarah" name="bacaan[]"
+               value="Sejarah">
+        <label for="sejarah">Sejarah</label>
+        <br><br>
+
+        <label for="alamat">Alamat:</label><br>
+        <textarea id="alamat" name="alamat" rows="4"
+                  cols="35" placeholder="Masukkan alamat"></textarea>
+        <br><br>
+
+        <label for="tanggal">Tanggal Pendaftaran:</label><br>
+        <input type="date" id="tanggal" name="tanggal"
+               required>
+        <br><br>
+
+        <input type="submit" value="Daftar Anggota">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Klinik Sehat</title>
+</head>
+<body>
+
+    <h2>FORMULIR PENDAFTARAN PASIEN KLINIK SEHAT</h2>
+
+    <form action="" method="get">
+
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama"
+               placeholder="Masukkan nama pasien" required>
+        <br><br>
+
+        <label for="nik">NIK:</label><br>
+        <input type="text" id="nik" name="nik"
+               inputmode="numeric" placeholder="Masukkan NIK"
+               required>
+        <br><br>
+
+        <label for="tanggal_lahir">Tanggal Lahir:</label><br>
+        <input type="date" id="tanggal_lahir"
+               name="tanggal_lahir" required>
+        <br><br>
+
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" id="laki" name="jenis_kelamin"
+               value="Laki-laki" required>
+        <label for="laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis_kelamin"
+               value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+        <br><br>
+
+        <label for="telepon">Nomor Telepon:</label><br>
+        <input type="tel" id="telepon" name="telepon"
+               placeholder="Masukkan nomor telepon" required>
+        <br><br>
+
+        <label for="alamat">Alamat:</label><br>
+        <textarea id="alamat" name="alamat" rows="3"
+                  cols="35" placeholder="Masukkan alamat"
+                  required></textarea>
+        <br><br>
+
+        <label for="poli">Pilih Poli:</label><br>
+        <select id="poli" name="poli" required>
+            <option value="">-- Pilih Poli --</option>
+            <option value="Umum">Poli Umum</option>
+            <option value="Gigi">Poli Gigi</option>
+            <option value="Anak">Poli Anak</option>
+            <option value="Mata">Poli Mata</option>
+        </select>
+        <br><br>
+
+        <label for="tanggal_periksa">Tanggal Pemeriksaan:</label><br>
+        <input type="date" id="tanggal_periksa"
+               name="tanggal_periksa" required>
+        <br><br>
+
+        <label for="keluhan">Keluhan Pasien:</label><br>
+        <textarea id="keluhan" name="keluhan" rows="5"
+                  cols="35" placeholder="Tuliskan keluhan pasien"
+                  required></textarea>
+        <br><br>
+
+        <label>Metode Pembayaran:</label><br>
+        <input type="radio" id="tunai" name="pembayaran"
+               value="Tunai" required>
+        <label for="tunai">Tunai</label>
+
+        <input type="radio" id="bpjs" name="pembayaran"
+               value="BPJS">
+        <label for="bpjs">BPJS</label>
+        <br><br>
+
+        <input type="checkbox" id="persetujuan"
+               name="persetujuan" value="Ya" required>
+        <label for="persetujuan">
+            Saya menyatakan data yang diisi sudah benar.
+        </label>
+        <br><br>
+
+        <input type="submit" value="Daftar Pemeriksaan">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
