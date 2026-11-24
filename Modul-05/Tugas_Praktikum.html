@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junico — Ini Ceritaku</title>
+<style>
+    :root {
+        --ink: #0a1f44;
+        --blue: #2457c5;
+        --sky: #cfe0ff;
+        --paper: #f6f3ec;
+        --pop: #ff6b4a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: "Trebuchet MS", Verdana, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* TOP BAR */
+    .bar {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 16px 4vw;
+        background: var(--ink); color: #fff;
+    }
+    .bar b { letter-spacing: 6px; font-size: 14px; }
+    .bar nav { display: flex; gap: 6px; }
+    .bar nav a {
+        font-size: 12px; letter-spacing: 3px;
+        padding: 8px 16px; border-radius: 30px;
+        transition: .25s; color: var(--sky);
+    }
+    .bar nav a:hover { background: var(--pop); color: #fff; }
+
+    /* PAGE GRID */
+    main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        gap: 0;
+    }
+
+    /* LEFT */
+    .left {
+        background: var(--ink); color: var(--paper);
+        padding: 4vh 4vw;
+        display: flex; flex-direction: column; justify-content: center; gap: 3.5vh;
+    }
+    .tag {
+        font-size: 11px; letter-spacing: 6px; color: var(--pop);
+        font-weight: bold; margin-bottom: 12px;
+    }
+    h1 {
+        font-size: clamp(44px, 7.2vw, 110px);
+        line-height: .92; letter-spacing: -2px;
+    }
+    h1 span { color: var(--pop); }
+    .sub { margin-top: 14px; color: var(--sky); font-size: 14px; max-width: 420px; line-height: 1.7; }
+
+    .about { display: flex; gap: 22px; align-items: flex-start; }
+    .mono {
+        flex: 0 0 auto;
+        width: 84px; height: 84px; border-radius: 50%;
+        background: var(--pop); color: var(--ink);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 34px; font-weight: 900; letter-spacing: -1px;
+        box-shadow: 6px 6px 0 var(--blue);
+    }
+    .about h2 { font-size: 20px; letter-spacing: 1px; margin-bottom: 8px; }
+    .about p { font-size: 13.5px; line-height: 1.8; color: #c6d8f1; text-align: justify; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .chips span {
+        font-size: 11px; letter-spacing: 1px;
+        border: 1.5px solid var(--blue); color: var(--sky);
+        padding: 5px 12px; border-radius: 20px;
+    }
+
+    /* RIGHT */
+    .right {
+        background: var(--blue); color: #fff;
+        padding: 4vh 4vw;
+        display: flex; flex-direction: column; justify-content: center;
+    }
+    .right h2 { font-size: clamp(30px, 3.6vw, 54px); line-height: 1; margin-bottom: 12px; letter-spacing: -1px; }
+    .intro { font-size: 14px; line-height: 1.8; font-style: italic; opacity: .92; max-width: 480px; }
+
+    .pendidikan {
+        margin-top: 3vh;
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    }
+    .pendidikan a {
+        text-align: center;
+        padding: 16px 4px;
+        font-weight: bold; font-size: 18px;
+        border: 3px solid #fff;
+        box-shadow: 5px 5px 0 var(--pop);
+        transition: .25s;
+    }
+    .pendidikan a:hover {
+        background: var(--pop); border-color: var(--pop);
+        transform: translate(-3px, -3px);
+        box-shadow: 8px 8px 0 var(--ink);
+    }
+    .pendidikan small {
+        display: block; font-size: 10px; font-weight: normal;
+        letter-spacing: 1px; margin-top: 6px; color: var(--sky);
+    }
+    .pendidikan a:hover small { color: #fff; }
+
+    .cerita {
+        margin-top: 3.5vh;
+        background: var(--paper); color: var(--ink);
+        padding: 22px 26px;
+        border-left: 8px solid var(--pop);
+        box-shadow: 10px 10px 0 var(--ink);
+    }
+    .cerita h3 { font-size: 20px; margin-bottom: 10px; }
+    .cerita p { font-size: 13.5px; line-height: 1.85; text-align: justify; color: #34456a; }
+
+    /* FOOTER */
+    footer {
+        background: var(--ink); color: var(--sky);
+        text-align: center; padding: 14px;
+        font-size: 11px; letter-spacing: 2px;
+    }
+
+    /* HP / layar sempit: tumpuk ke bawah */
+    @media (max-width: 900px) {
+        main { grid-template-columns: 1fr; }
+        .bar nav { display: none; }
+        .left, .right { padding: 40px 6vw; }
+        .about { flex-direction: column; }
+        .pendidikan { grid-template-columns: repeat(2, 1fr); }
+    }
+</style>
+</head>
+<body>
+
+<div class="bar">
+    <b>Junico.</b>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#profil">PROFIL</a>
+        <a href="#pendidikan">PENDIDIKAN</a>
+        <a href="#kontak">KONTAK</a>
+    </nav>
+</div>
+
+<main>
+    <!-- KIRI: HOME + PROFIL -->
+    <section class="left" id="home">
+        <div>
+            <div class="tag">WELCOME TO MY PROFILE</div>
+            <h1>This is<br>my <span>story.</span></h1>
+            <p class="sub">A little space to share who I am and what I do.</p>
+        </div>
+
+        <div class="about" id="profil">
+            <div class="mono">6</div>
+            <div>
+                <h2>TENTANG AKU</h2>
+                <p>
+                    Nama saya Junico Agnesia Perdana Kusuma. Saat ini saya merupakan mahasiswa Teknik Informatika di Universitas PGRI Madiun. Saya suka mencoba hal-hal baru, tertarik dengan teknologi, dan senang mengeksplorasi sesuatu yang belum pernah saya pelajari. Di luar perkuliahan, saya juga punya pengalaman mengikuti kegiatan organisasi dan kepanitiaan kampus.
+                </p>
+                <div class="chips">
+                    <span>MAHASISWA S1</span>
+                    <span>TEKNIK INFORMATIKA</span>
+                    <span>UNIVERSITAS PGRI MADIUN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KANAN: PENDIDIKAN -->
+    <section class="right">
+        <div class="tag" style="color:#fff">MY EDUCATION</div>
+        <h2>Perjalanan<br>Pendidikan</h2>
+        <p class="intro">
+            Dari ruang kelas ke ruang kehidupan, setiap langkah menyimpan cerita dan setiap masa meninggalkan jejak.
+        </p>
+
+        <div class="pendidikan" id="pendidikan">
+            <a href="#sd">
+                SD
+                <small>MIN 5 NGAWI</small>
+            </a>
+            <a href="#smp">
+                SMP
+                <small>MTsn 5 NGAWI</small>
+            </a>
+            <a href="#sma">
+                SMA
+                <small>SMK PGRI 1 NGAWI</small>
+            </a>
+            <a href="#s1">
+                S1
+                <small>UNIVERSITAS PGRI MADIUN</small>
+            </a>
+        </div>
+
+        <div class="cerita">
+            <h3 id="sd">Kisah Sekolahku</h3>
+            <p>
+                Perjalanan pendidikan saya dimulai dari bangku Sekolah Dasar, kemudian berlanjut ke SMP dan SMA, hingga sekarang melanjutkan kuliah di Universitas PGRI Madiun. Masa sekolah dan perkuliahan memberikan banyak pengalaman, mulai dari bertemu teman baru, mengikuti berbagai kegiatan, sampai menghadapi tugas dan tantangan yang berbeda. Sekarang saya masih menjalani perjalanan sebagai mahasiswa Teknik Informatika dan terus menambah pengalaman selama kuliah.
+            </p>
+            <div id="smp"></div>
+            <div id="sma"></div>
+            <div id="s1"></div>
+        </div>
+    </section>
+</main>
+
+<footer id="kontak">
+    &copy; 2026 WEB PORTOFOLIO TUGAS PRAKTIKUM MODUL 5 | ALL RIGHTS RESERVED
+</footer>
+
+</body>
+</html>
